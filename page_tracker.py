@@ -24,12 +24,11 @@ another_youtube_text = 'This video isn\'t available any more'
 
 def check_page(url):
     options = Options()
-    options.headless = True  # Set to True if you don't want the browser to open
+    options.headless = True
 
-    driver = webdriver.Chrome(options=options)  # Make sure to provide the correct path to your chromedriver executable
+    driver = webdriver.Chrome(options=options)
     driver.get(url)
 
-    # Wait for the page to load (adjust the time.sleep value as needed)
     time.sleep(5)
 
     page_source = driver.page_source
